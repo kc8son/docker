@@ -215,7 +215,7 @@ Project Link: [https://github.com/kc8son/docker](https://github.com/kc8son/docke
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* []()
+* [othneildrew](https://github.com/othneildrew) - for a great and complete README.md example.  Thanks so much!
 * []()
 * []()
 
