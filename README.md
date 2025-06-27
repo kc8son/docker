@@ -107,7 +107,9 @@ This is simply a list of various docker images that I run for my personal traini
 <!-- GETTING STARTED -->
 ## Getting Started
 * First install docker. 
-* Then create a folder for your server (postgresql or airflow for example). 
+* Then create a folder for your server (postgresql or airflow for example).  
+* Copy the yaml file to that folder. 
+* Rename the file to docker-compose.yaml.
 * Within that folder, create any folders needed to persist data - expecially for database servers.  
 * within that folder from the command line 'docker compose up -d'  
 
@@ -204,7 +206,7 @@ Distributed under the project_license. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - kc8son@yahoo.com
+Joseph P. Merten - kc8son@yahoo.com - [LinkedIn](https://www.linkedin.com/in/joseph-merten/)
 
 Project Link: [https://github.com/kc8son/docker](https://github.com/kc8son/docker)
 
