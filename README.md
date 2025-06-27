@@ -98,6 +98,7 @@ This is simply a list of various docker images that I run for my personal traini
 * [![Docker][Docker.js]][Docker-url]
 * [![VSCode][vscode.js]][vscode-url]
 * [![Airflow][airflow.js]][airflow-url]
+* [![postgreSQL][postgreSQL.js]][postgreSQL-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -105,10 +106,12 @@ This is simply a list of various docker images that I run for my personal traini
 
 <!-- GETTING STARTED -->
 ## Getting Started
+* First install docker. 
+* Then create a folder for your server (postgresql or airflow for example). 
+* Within that folder, create any folders needed to persist data - expecially for database servers.  
+* within that folder from the command line 'docker compose up -d'  
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
+<!-- 
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
@@ -137,7 +140,7 @@ This is an example of how to list things you need to use the software and how to
    git remote set-url origin kc8son/docker
    git remote -v # confirm the changes
    ```
-
+ -->
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -145,9 +148,7 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -242,13 +243,16 @@ Project Link: [https://github.com/kc8son/docker](https://github.com/kc8son/docke
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 
 [Docker-url]: https://www.docker.com/products/docker-desktop/
-[Docker.js]: images/docker.png
+[Docker.js]: images/docker_small.png
 
 [VSCode-url]: https://code.visualstudio.com/download
-[VSCode.js]: images/vscode.png
+[VSCode.js]: images/vscode_small.png
 
 [airflow-url]: https://airflow.apache.org/
-[airflow.js]: images/airflow.png
+[airflow.js]: images/airflow_small.png
+
+[postgresql-url]: https://www.postgresql.org/
+[postgresql.js]: images/postgresql_small.png
 
 [React-url]: https://reactjs.org/
 [Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
