@@ -1,0 +1,45 @@
+services:
+  database:
+    image: postgres:latest
+    ports:
+      - 5432:5432
+    restart: always
+    environment:
+      POSTGRES_USER: docker
+      POSTGRES_PASSWORD: docker
+      POSTGRES_DB: docker
+  # In this example, we share the folder `db-data` in our root repository, with the default PostgreSQL data path.
+  # It means that every time the repository is modifying the data inside
+  # of `/var/lib/postgresql/data/`, automatically the change will appear in `db-data`.
+  # You don't need to create the `db-data` folder. Docker Compose will do it for you.
+    volumes:
+      - ./db-data/:/var/lib/postgresql/data/
+  # This new section is for PGAdmin it should be available at http://127.0.0.1:5050/
+  # The database comes up alright - I can connect from DataGrip
+  # PGAdmin doesn't seem to be able to find the database for some reason.
+  # This article may have some troubleshooting help:
+  #    https://stackoverflow.com/questions/53610385/docker-postgres-and-pgadmin-4-connection-refused - YES!
+  # $docker network ls   --- This will desplay the networks.  postgresql_default is the one we want...
+  # $docker network inspect postgresql_default  --- This will display the internal IP Addresses.  
+  # In this case 172.27.0.3.  Put THAT into PGAdmin.  
+  # This address may  change from one instance to another.
+  # This can also be reached from the docker dashboard...
+  #
+  # PGAmin ID/PW...
+  #   kc8son@yahoo.com/qwerty123456
+  #
+  # IP Address of DB Server: 192.168.65.3
+  #
+  # Host/Database/Username:
+  #   localhost/eSWR/eSWR
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: kc8son@yahoo.com
+      PGADMIN_DEFAULT_PASSWORD: qwerty123456
+    volumes:
+      - ./pgadmin-data:/var/lib/pgadmin
+    ports:
+      - "5050:80"
