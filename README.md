@@ -33,7 +33,7 @@ Original README.md:  https://github.com/othneildrew/Best-README-Template/blob/ma
 <br />
 <div align="center">
   <a href="https://github.com/kc8son/docker">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="./images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Docker config files</h3>
