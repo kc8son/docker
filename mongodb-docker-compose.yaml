@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  mongo: 
+    image: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: mongadmin
+      MONGO_INITDB_ROOT_PASSWORD: ^QU^rium
+    ports:
+      - 27017:27017
+    volumes:
+      - ./mongodata:/data/db
+      - ./mongobackups:/data/backups
+volumes:
+  mongodata:
+    driver: localmongorestore --uri="mongodb://mongadmin@localhost:27017/?authSource=admin" /data/backups/speed_test
